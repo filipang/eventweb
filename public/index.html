@@ -1,104 +1,122 @@
-﻿<!DOCTYPE html>
-<html>
-  <head>
-    
-  </head>
-  <body>
-      <h1>You can edit this demo text!</h1>
-      <h2>How to use the editor:</h2>
-      <p>Paste your documents in the visual editor on the left or your HTML code in the source editor in the right. <br />Edit any of the two areas and see the other changing in real time.&nbsp;</p>
-      <p>Click the Clean button to clean your source code.</p>
-      <h2>Some useful features:</h2>
-      <ol>
-          <li><img src="https://html-online.com/img/01-interactive-connection.png" alt="interactive connection" width="45" /> Interactive source editor</li>
-          <li><img src="https://html-online.com/img/02-html-clean.png" alt="html cleaner" width="45" /> HTML Cleaning</li>
-          <li><img src="https://html-online.com/img/03-docs-to-html.png" alt="Word to html" width="45" /> Word to HTML conversion</li>
-          <li><img src="https://html-online.com/img/04-replace.png" alt="replace text" width="45" /> Find and Replace</li>
-          <li><img src="https://html-online.com/img/05-gibberish.png" alt="gibberish" width="45" /> Lorem-Ipsum generator</li>
-          <li><img src="https://html-online.com/img/6-table-div-html.png" alt="html table div" width="45" /> Table to DIV conversion</li>
-      </ol>
-      <p>&nbsp;</p>
-      <h2>Cleaning options:</h2>
-      <table>
-          <thead>
-              <tr>
-                  <td>Name of the feature</td>
-                  <td>Example</td>
-                  <td>Default</td>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>Remove tag attributes</td>
-                  <td><img src="images/smiley.png" alt="laughing" width="40" height="16" /> (except <strong>img</strong>-<em>src</em> and <strong>a</strong>-<em>href</em>)</td>
-              </tr>
-              <tr>
-                  <td>Remove inline styles</td>
-                  <td>You <strong>should never</strong>&nbsp;use inline styles!</td>
-                  <td><strong>x</strong></td>
-              </tr>
-              <tr>
-                  <td>Remove classes and IDs</td>
-                  <td>Use classes to <strong>style everything</strong>.</td>
-                  <td><strong>x</strong></td>
-              </tr>
-              <tr>
-                  <td>Remove all tags</td>
-                  <td>This leaves <strong>only the plain</strong> <em>text</em>. <img src="images/smiley.png" alt="laughing" width="16" height="16" /></td>
-              </tr>
-              <tr>
-                  <td>Remove successive &amp;nbsp;s</td>
-                  <td>Never use non-breaking spaces to set margins.</td>
-                  <td><strong>x</strong></td>
-              </tr>
-              <tr>
-                  <td>Remove empty tags</td>
-                  <td>Empty tags should go!</td>
-              </tr>
-              <tr>
-                  <td>Remove tags with one &amp;nbsp;</td>
-                  <td>This makes&nbsp;no sense!</td>
-                  <td><strong>x</strong></td>
-              </tr>
-              <tr>
-                  <td>Remove span tags</td>
-                  <td>Span tags with all styles</td>
-                  <td><strong>x</strong></td>
-              </tr>
-              <tr>
-                  <td>Remove images</td>
-                  <td>I am an image: <img src="images/smiley.png" alt="laughing" /></td>
-              </tr>
-              <tr>
-                  <td>Remove links</td>
-                  <td><a href="https://html-online.com">This is</a> a link.</td>
-              </tr>
-              <tr>
-                  <td>Remove tables</td>
-                  <td>Takes everything out of the table.</td>
-              </tr>
-              <tr>
-                  <td>Replace table tags with structured divs</td>
-                  <td>This text is inside a table.</td>
-              </tr>
-              <tr>
-                  <td>Remove comments</td>
-                  <td>This is only visible in the source editor</td>
-                  <td><strong>x</strong></td>
-              </tr>
-              <tr>
-                  <td>Encode special characters</td>
-                  <td>&hearts; <strong>☺ ★</strong> &gt;&lt;</td>
-                  <td><strong>3445x</strong></td>
-              </tr>
-              <tr>
-                  <td>Set new lines and text indents</td>
-                  <td>Organize the tags in a nice tree view.</td>
-              </tr>
-          </tbody>
-      </table>
-      <p>&nbsp;</p>
-      <p><strong>Save this link into your bookmarks and share it with your friends. It is all FREE! </strong><br /><strong>Enjoy!</strong></p>
-      <p>&nbsp;</p>
-  </body>
+﻿<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <title>GameGuidez</title>
+</head>
+<body class="grey lighten-3" ">
+    <!-- NAVBAR -->
+    <nav class="z-depth-0 grey lighten-4">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">
+                <img src="img/index.svg" style="width: 180px; margin-top: 10px;">
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="logged-in">
+                    <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+                </li>
+                <li class="logged-in">
+                    <a href="#" class="grey-text" id="logout">Logout</a>
+                </li>
+                <li class="logged-in">
+                    <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
+                </li>
+                <li class="logged-out">
+                    <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+                </li>
+                <li class="logged-out">
+                    <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+                </li>
+                </span>
+            </ul>
+        </div>
+    </nav>
+    <!-- SIGN UP MODAL -->
+    <div id="modal-signup" class="modal">
+        <div class="modal-content">
+            <h4>Sign up</h4><br />
+            <form id="signup-form">
+                <div class="input-field">
+                    <input type="email" id="signup-email" required />
+                    <label for="signup-email">Email address</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="signup-password" required />
+                    <label for="signup-password">Choose password</label>
+                </div>
+                <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+            </form>
+        </div>
+    </div>
+    <!-- LOGIN MODAL -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <h4>Login</h4><br />
+            <form id="login-form">
+                <div class="input-field">
+                    <input type="email" id="login-email" required />
+                    <label for="login-email">Email address</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="login-password" required />
+                    <label for="login-password">Your password</label>
+                </div>
+                <button class="btn yellow darken-2 z-depth-0">Login</button>
+            </form>
+        </div>
+    </div>
+    <!-- ACCOUNT MODAL -->
+    <div id="modal-account" class="modal">
+        <div class="modal-content center-align">
+            <h4>Account details</h4><br />
+            <div class="account-details"></div>
+        </div>
+    </div>
+    <!-- CREATE GUIDE MODAL -->
+    <div id="modal-create" class="modal">
+        <div class="modal-content">
+            <h4>Create Guide</h4><br />
+            <form id="create-form">
+                <div class="input-field">
+                    <input type="text" id="title" required>
+                    <label for="title">Guide Title</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="content" class="materialize-textarea" required></textarea>
+                    <label for="content">Guide Content</label>
+                </div>
+                <button class="btn yellow darken-2 z-depth-0">Create</button>
+            </form>
+        </div>
+    </div>
+    <!-- GUIDE LIST -->
+    <div class="container" style="margin-top: 40px;">
+        <ul class="collapsible z-depth-0 guides" style="border: none;">
+            <li>
+                <div class="collapsible-header grey lighten-4">Guide title</div>
+                <div class="collapsible-body white">Lorem ipsum dolor sit amet.</div>
+            </li>
+            <li>
+                <div class="collapsible-header grey lighten-4">Guide title</div>
+                <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header grey lighten-4">Guide title</div>
+                <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header grey lighten-4">Guide title</div>
+                <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/index.js"></script>
+</body>
 </html>
