@@ -28,6 +28,7 @@ signupForm.addEventListener('submit', (e) => {
         const modal = document.querySelector('#modal-signup');
         M.Modal.getInstance(modal).close();
         signupForm.reset();
+        firebase.database().ref().child("Users").child(cred.user.uid).child("email").set(cred.user.email);
     });
 
 });
@@ -90,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const storageRef = firebase.storage().ref();
             const uid = user.uid;
             const ref = firebase.database().ref("posts");
+            var matchPercentage;
             feed.innerHTML = "";
             const post_template = document.querySelector("#post_template");
             var z = ref.orderByChild("user_coef_list/" + uid).on("child_added", function (dataSnapshot) {
@@ -104,6 +106,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
                         else console.log("ERROR ON :" + key);
                     });
+                    matchPercentage = String(dataSnapshot.child("user_coef_list").child(uid).val());
+                    cloned.content.getElementById("matchPercentage").textContent = Number(matchPercentage.substring(0, 4)) * 100 + "% match";
+                    console.log(Number(matchPercentage.substring(0, 4)) * 100 + "% match");
                     cloned.content.getElementById("imager").src = url;
                     feed.appendChild(cloned.content);
                 });
